@@ -1,0 +1,306 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.bloque10 {
+    // background-color: v.$cuarto;
+    height: auto;
+    overflow: hidden;
+    padding: 8rem 0;
+    display: flex;
+    justify-content: center;
+    @include m.desktop_1020 {
+      z-index: 10;
+    }
+}
+
+.bloque10Container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    width: 30rem;
+    @include m.desktop_1020 {
+        width: 80rem;    
+    }
+    @include m.desktop_1200 {
+      row-gap: 3rem; 
+    }
+}
+
+.bloque10Top {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    @include m.desktop_1020 {
+      // flex-direction: row;
+      // justify-content: space-between;
+    }
+    @include m.desktop_1200 { 
+      row-gap: 2rem;
+    }
+} 
+
+.bloque10Left {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    @include m.desktop_1020 {
+        // width: 36rem;
+        width: 100%;
+        align-items: center;
+        // background-color: red;
+    }
+    @include m.desktop_1200 {
+      row-gap: 3rem;
+    }
+    .bloque10LeftTitle {
+        // background-color: red;
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+        // padding: 0 5rem;
+        @include m.desktop_1020 {
+            row-gap: 1.5rem;
+        }
+        @include m.desktop_1200 {
+          row-gap: 2.5rem;
+        }
+        h3, h4, h5 {
+            margin: 0;
+            color: black;
+            font-weight: 500;
+            text-align: center;
+            @include m.desktop_1020 {
+                text-align: left;
+            }
+        }
+        h4 {
+            font-size: 1.8rem;
+            @include m.phone_390 {
+              font-size: 2.3rem;
+            }
+            @include m.desktop_1020 {
+                display: none;
+            }
+            span {
+                font-weight: 700;
+            }
+        }
+        h3 {
+            font-size: 2rem;
+            font-weight: 800;
+            @include m.desktop_1020 {
+                display: none;
+            }
+        }
+        h5 {
+            margin-top: .5rem;
+            font-size: 1.5rem;
+            @include m.phone_390 {
+              font-size: 1.7rem;
+            }
+            @include m.desktop_1020 {
+                font-size: 1.5rem;
+                text-align: center;
+            }
+            @include m.desktop_1200 {
+              font-size: 2.2rem;  
+            }
+        }
+        .bloque10LeftTitleh3, 
+        .bloque10LeftTitleh4 {
+            display: none;
+            @include m.desktop_1020 {
+                display: block;
+                // text-align: center;
+            }
+        }
+        .bloque10LeftTitleh4 {
+            font-size: 2rem;
+            text-align: center;
+            @include m.desktop_1200 {
+              font-size: 2.7rem;  
+            }
+        }
+        .bloque10LeftTitleh3 {
+            font-size: 3rem;
+            text-align: center;
+        }
+    }
+    img {
+        width: 3rem;
+    }
+}
+
+.bloque10LeftItemContent {
+    // background-color: purple;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1.5rem;
+    // padding: 1rem;
+    @include m.desktop_1020 {
+        row-gap: 1rem;
+    }
+    @include m.desktop_1200 {
+      row-gap: 2rem;
+    }
+    .bloque10LeftItem {
+        background-color: black;
+        width: 27rem;
+        height: 7rem;
+        border-radius: 1.5rem;
+        display: flex;
+        column-gap: 1.5rem;
+        padding: 1.2rem 2rem;
+        align-items: center;
+        // justify-content: center;
+        @include m.phone_375 {
+          width: 28rem;
+        }
+        @include m.desktop_1020 {
+            background-color: v.$cuarto;
+            width: 37rem;
+            height: 5.5rem;
+            justify-content: center;
+        }
+        @include m.desktop_1200 {
+          width: 46rem;  
+          height: 7rem;
+        }
+        img {
+            width: auto;
+            height: 4rem;
+            @include m.desktop_1020 {
+                filter: brightness(0) saturate(100%) invert(0%) sepia(100%) saturate(7437%) hue-rotate(328deg) brightness(89%) contrast(89%);
+            }
+            @include m.desktop_1200 {
+              height: 4.5rem;
+            }
+        }
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: white;
+            @include m.desktop_1020 {
+                color: black;
+            }
+            @include m.desktop_1200 {
+              font-size: 2rem;
+            }
+        }
+    }
+}
+
+.bloque10Right {
+    @include m.desktop_1020 {
+        width: 100%;
+        // background-color: purple;
+    }
+    .bloque10RightImage {
+        display: none;
+        @include m.desktop_1020 {
+            display: block;
+            object-fit: contain;
+            width: 100%;
+        }
+    }
+}
+
+.bloque10RightContent {
+    margin-top: 2rem;
+    // background-color: purple;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    @include m.phone_375 {
+      padding: 0 1rem;
+    }
+    @include m.desktop_1020 {
+        margin: 0;
+        position: relative; 
+        justify-content: center;
+        // top: -3rem;
+    }
+}
+
+.bloque10RightItem {
+    // background-color: red;
+    border-radius: 1.5rem;
+    width: 7.5rem;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1rem;
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 16px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 16px -3px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 16px -3px rgba(0,0,0,0.75);
+    @include m.phone_375 {
+      width: 8rem;
+    }
+    @include m.desktop_1020 {
+      box-shadow: none;
+      border-radius: 0;
+      width: 10rem;
+      &:nth-child(1) {
+        border-right: 2px solid black;
+      }
+      &:nth-child(2) {
+        border-right: 2px solid black;
+      }
+    }
+    @include m.desktop_1200 {
+      width: 14rem;
+      row-gap: 2rem;
+    }
+    img {
+        width: 3rem;
+        @include m.desktop_1200 {
+          width: 4.5rem;
+        }
+    }
+    h3 {
+        margin: 0;
+        font-size: 1.15rem;
+        color: black;
+        font-weight: 500;
+        @include m.phone_375 {
+          font-size: 1.3rem;
+        }
+        @include m.desktop_1200 {
+          font-size: 1.8rem;
+        }
+    }
+}           
+
+.bloque10Bottom {
+    // background-color: red;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    @include m.desktop_1020 {
+        margin: 0;
+    }
+    button {
+        width: 23rem;
+        height: 4.5rem;
+        border-radius: 2.5rem;
+        border: none;
+        background-color: v.$color1;
+        @include m.desktop_1200 {
+          width: 34rem;
+          height: 5.5rem;
+        }
+        h3 {
+            margin: 0;
+            font-size: 1.7rem;
+            font-weight: 800;
+            color: black;
+            @include m.desktop_1200 {
+              font-size: 2.2rem;
+            }
+        }
+    }
+} 
